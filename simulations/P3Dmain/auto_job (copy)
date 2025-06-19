@@ -1,0 +1,7 @@
+for i in $(seq 400 1 499)
+do
+cd /share/home/chenpf/nyw/QS/P3D/MFR_$i
+setup.pl -d=1 -arch=intel
+make
+bsub < job
+done

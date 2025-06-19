@@ -1,0 +1,7 @@
+for i in $(seq 1 1 9)
+do
+cd /home/test/ltjupyter/work/1paperwork/20231108s3d_simulation/P3DS/mfrdata2/P3D/MFR_$i
+setup.pl -d=1 -arch=intel
+make
+mpirun -np 8 ./amrvac -i amrvac.par
+done
